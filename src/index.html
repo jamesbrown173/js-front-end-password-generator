@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Password generator app</title>
+
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body
+    class="bg-[#13121A] flex flex-col items-center justify-center h-dvh w-dvw"
+  >
+    <!-- Breakpoint Visualizer -->
+    <section>
+      <div
+        class="bg-green-500 w-10 h-10 fixed top-0 left-0 flex items-center justify-center text-3xl rounded-br-lg"
+      >
+        📱
+      </div>
+      <div
+        class="sm:flex bg-yellow-500 w-10 h-10 hidden items-center justify-center text-white fixed top-0 left-0 rounded-br-lg"
+      >
+        sm
+      </div>
+      <div
+        class="md:flex bg-red-500 w-10 h-10 hidden items-center justify-center text-white fixed top-0 left-0 rounded-br-lg"
+      >
+        md
+      </div>
+      <div
+        class="lg:flex bg-blue-500 w-10 h-10 hidden items-center justify-center text-white fixed top-0 left-0 rounded-br-lg"
+      >
+        lg
+      </div>
+      <div
+        class="xl:flex bg-purple-500 w-10 h-10 hidden items-center justify-center text-white fixed top-0 left-0 rounded-br-lg"
+      >
+        xl
+      </div>
+      <div
+        class="2xl:flex bg-black w-10 h-10 hidden items-center justify-center text-white fixed top-0 left-0 rounded-br-lg"
+      >
+        2xl
+      </div>
+    </section>
+
+    <!-------------------------------------------------------------------------------------------------->
+    <!-- Main Container -->
+    <!-------------------------------------------------------------------------------------------------->
+
+    <div class="">
+      <h1 class="font-mono text-white text-opacity-50">Password Generator</h1>
+
+      <!-------------------------------------------------------------------------------------------------->
+      <!-- Password Output -->
+      <!-------------------------------------------------------------------------------------------------->
+      <div class="bg-[#24232B] flex justify-between w-full">
+        <h1>PTx1f5DaFX</h1>
+        <img src="./assets/images/icon-copy.svg" alt="copyIcon" />
+      </div>
+      <!-------------------------------------------------------------------------------------------------->
+      <!-- Password Generator Options -->
+      <!-------------------------------------------------------------------------------------------------->
+      <div>
+        <!-- Character Length Slider -->
+        <div class="flex justify-between">
+          <p>Character Length</p>
+          <p>10</p>
+        </div>
+        <input
+          type="range"
+          min="1"
+          max="10"
+          value="5"
+          class="w-full"
+          id="passwordLength"
+        />
+        <div>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+          <label for="vehicle1"></label>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="text-red-500">hello</h1>
+  </body>
+</html>
