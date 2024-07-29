@@ -578,6 +578,10 @@ video {
   height: 2.5rem;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .h-dvh {
   height: 100dvh;
 }
@@ -586,12 +590,24 @@ video {
   width: 2.5rem;
 }
 
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
 .w-dvw {
   width: 100dvw;
 }
 
 .w-full {
   width: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-col {
@@ -610,8 +626,62 @@ video {
   justify-content: space-between;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .rounded-br-lg {
   border-bottom-right-radius: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-\[\#A4FFAF\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(164 255 175 / var(--tw-border-opacity));
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.bg-\[\#13121A\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(19 18 26 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#141219\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 18 25 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#24232B\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 35 43 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#A4FFAF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(164 255 175 / var(--tw-bg-opacity));
 }
 
 .bg-black {
@@ -644,14 +714,32 @@ video {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#13121A\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(19 18 26 / var(--tw-bg-opacity));
+.p-10 {
+  padding: 2.5rem;
 }
 
-.bg-\[\#24232B\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(36 35 43 / var(--tw-bg-opacity));
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .font-mono {
@@ -663,9 +751,23 @@ video {
   line-height: 2.25rem;
 }
 
-.text-red-500 {
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-\[\#57565F\] {
   --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
+  color: rgb(87 86 95 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -677,9 +779,143 @@ video {
   --tw-text-opacity: 0.5;
 }
 
+.accent-black {
+  accent-color: #000;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------
+Custom Checkbox styles. 
+
+No idea how to do this in tailwind or if it's even possible.
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  border: 2px solid #a4ffaf;
+  padding: 1px;
+  background-color: #141219;
+}
+
+input[type="checkbox"]:checked:before {
+  background-color: #a4ffaf;
+}
+
+input[type="checkbox"]:checked:after {
+  content: "";
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 8px;
+  height: 15px;
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------
+Custom Slider styles. 
+
+No idea how to do this in tailwind or if it's even possible.
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+/* input[type="range"] {
+  accent-color: #a4ffaf;
+} */
+
+#charLenSlider {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 100%;
+  height: 7px;
+  background: hsl(248, 15%, 11%);
+  background-image: linear-gradient(hsl(127, 100%, 82%), hsl(127, 100%, 82%));
+  background-size: 45% 100%;
+  background-repeat: no-repeat;
+}
+
+/*************************/
+
+/*CHROME*/
+
+#charLenSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 28px;
+  width: 28px;
+  border: 2px solid hsl(252, 11%, 91%);
+  border-radius: 50%;
+  background-color: hsl(252, 11%, 91%);
+  cursor: pointer;
+}
+
+#charLenSlider::-webkit-slider-thumb:hover {
+  border: 2px solid hsl(127, 100%, 82%);
+  background-color: hsl(248, 15%, 11%);
+}
+
+#charLenSlider::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+/*************************/
+
+/*FIREFOX*/
+
+#charLenSlider::-moz-range-thumb {
+  -moz-appearance: none;
+  height: 28px;
+  width: 28px;
+  border: 2px solid hsl(252, 11%, 91%);
+  border-radius: 50%;
+  background-color: hsl(252, 11%, 91%);
+  cursor: pointer;
+}
+
+#charLenSlider::-moz-range-thumb:hover,
+#charLenSlider::-moz-range-thumb:active {
+  border: 2px solid hsl(127, 100%, 82%);
+  background-color: hsl(248, 15%, 11%);
+}
+
+.checked\:accent-\[\#A4FFAF\]:checked {
+  accent-color: #A4FFAF;
+}
+
+.hover\:bg-\[\#25232B\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 35 43 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:text-\[\#A4FFAF\] {
+  --tw-text-opacity: 1;
+  color: rgb(164 255 175 / var(--tw-text-opacity));
+}
+
 @media (min-width: 640px) {
   .sm\:flex {
     display: flex;
+  }
+
+  .sm\:max-w-\[40rem\] {
+    max-width: 40rem;
   }
 }
 

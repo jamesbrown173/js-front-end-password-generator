@@ -1,3 +1,112 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ----------------------------------------------------------------------------------------------------------------------------------
+Custom Checkbox styles. 
+
+No idea how to do this in tailwind or if it's even possible.
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  border: 2px solid #a4ffaf;
+  padding: 1px;
+  background-color: #141219;
+}
+
+input[type="checkbox"]:checked:before {
+  background-color: #a4ffaf;
+}
+
+input[type="checkbox"]:checked:after {
+  content: "";
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 8px;
+  height: 15px;
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------
+Custom Slider styles. 
+
+No idea how to do this in tailwind or if it's even possible.
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+/* input[type="range"] {
+  accent-color: #a4ffaf;
+} */
+
+#charLenSlider {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 100%;
+  height: 7px;
+  background: hsl(248, 15%, 11%);
+  background-image: linear-gradient(hsl(127, 100%, 82%), hsl(127, 100%, 82%));
+  background-size: 45% 100%;
+  background-repeat: no-repeat;
+}
+/*************************/
+/*CHROME*/
+#charLenSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 28px;
+  width: 28px;
+  border: 2px solid hsl(252, 11%, 91%);
+  border-radius: 50%;
+  background-color: hsl(252, 11%, 91%);
+  cursor: pointer;
+}
+
+#charLenSlider::-webkit-slider-thumb:hover {
+  border: 2px solid hsl(127, 100%, 82%);
+  background-color: hsl(248, 15%, 11%);
+}
+
+#charLenSlider::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+/*************************/
+/*FIREFOX*/
+#charLenSlider::-moz-range-thumb {
+  -moz-appearance: none;
+  height: 28px;
+  width: 28px;
+  border: 2px solid hsl(252, 11%, 91%);
+  border-radius: 50%;
+  background-color: hsl(252, 11%, 91%);
+  cursor: pointer;
+}
+
+#charLenSlider::-moz-range-thumb:hover,
+#charLenSlider::-moz-range-thumb:active {
+  border: 2px solid hsl(127, 100%, 82%);
+  background-color: hsl(248, 15%, 11%);
+}
