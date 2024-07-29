@@ -66,7 +66,12 @@
       <!-------------------------------------------------------------------------------------------------->
       <div class="flex justify-between w-full bg-[#24232B] px-10 py-5">
         <h1 id="passwordOutput" class="text-[#57565F] text-xl">P4$5W0rD!</h1>
-        <img src="./assets/images/icon-copy.svg" alt="copyIcon" />
+        <img
+          id="copyIcon"
+          src="./assets/images/icon-copy.svg"
+          alt="copyIcon"
+          class="hover:cursor-pointer hover:fill-white"
+        />
       </div>
       <!-------------------------------------------------------------------------------------------------->
       <!-- Password Generator Options Input -->
@@ -77,7 +82,7 @@
         <!-- Character Length Slider -->
         <div class="flex justify-between">
           <p>Character Length</p>
-          <p id="charCount">10</p>
+          <p id="charCount">5</p>
         </div>
         <input
           id="charLenSlider"
@@ -91,23 +96,38 @@
         <div class="flex w-full gap-6">
           <input
             type="checkbox"
-            id="vehicle1"
+            id="upperCheckbox"
             name="vehicle1"
             value="Bike"
-            class="checked:accent-[#A4FFAF] accent-black w-5 h-5 border border-[#A4FFAF] cursor-pointer"
+            class="checkBox"
           />
           <label for="vehicle1">Include Uppercase Letters</label>
         </div>
-        <div class="flex w-full gap-6">
-          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+        <div class="checkBox flex w-full gap-6">
+          <input
+            id="lowerCheckbox"
+            type="checkbox"
+            name="vehicle1"
+            value="Bike"
+          />
           <label for="vehicle1">Include Lowercase Letters</label>
         </div>
-        <div class="flex w-full gap-6">
-          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+        <div class="checkBox flex w-full gap-6">
+          <input
+            id="numbersCheckbox"
+            type="checkbox"
+            name="vehicle1"
+            value="Bike"
+          />
           <label for="vehicle1">Include Numbers</label>
         </div>
-        <div class="flex w-full gap-6">
-          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+        <div class="checkBox flex w-full gap-6">
+          <input
+            id="symbolsCheckbox"
+            type="checkbox"
+            name="vehicle1"
+            value="Bike"
+          />
           <label for="vehicle1">Include Symbols</label>
         </div>
 
@@ -121,6 +141,7 @@
           <div class="flex gap-2">
             <p>MEDIUM</p>
             <div
+              id="strengthIndicator1"
               class="strengthIndicator h-5 w-2 border-white border-2 border-solid"
             ></div>
             <div
@@ -139,6 +160,7 @@
         <!-- Generate Button -->
         <!-------------------------------------------------------------------------------------------------->
         <button
+          id="generateButton"
           class="group flex justify-center items-center bg-[#A4FFAF] text-black py-4 border-[#A4FFAF] border-2 border-solid hover:bg-[#25232B]"
         >
           <p class="group-hover:text-[#A4FFAF]">GENERATE</p>
